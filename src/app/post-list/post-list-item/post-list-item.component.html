@@ -1,0 +1,13 @@
+<div class="list-group">
+  <a href="#" class="list-group-item flex-column align-items-start"
+    [ngClass]="{'list-group-item-success':loveIts>0,'list-group-item-danger':loveIts<0}">
+  <div>
+    <span>{{title}}</span>
+    <small class="pull-right">{{created_at | date: 'short' }}</small>
+  </div>
+  <p>{{content}}</p>
+  <button type="button" class="btn btn-success" (click)="love(true);">Love it</button>
+  &nbsp;
+  <button type="button" class="btn btn-danger" (click)="love(false);">Don't Love it</button>
+  </a>
+</div>

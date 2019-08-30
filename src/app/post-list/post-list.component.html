@@ -1,0 +1,3 @@
+<app-post-list-item *ngFor="let post of posts" [key]="post.key" [title]="post.title" [content]="post.content"
+  [loveIts]="post.countLove" [created_at]="post.dateCreation">
+</app-post-list-item>

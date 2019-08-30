@@ -1,3 +1,5 @@
+import { PostService } from 'src/shared/services/post.service';
+import { Post } from './../shared/types/post';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'blog';
-}
+  posts: Post[];
+
+  constructor(private postService: PostService) {
+    this.posts = postService.list();
+  }
+
+};
